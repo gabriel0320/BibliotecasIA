@@ -8,36 +8,36 @@ import random
 # random: Utilizado aquí para generar muestras aleatorias.
 # Ejemplo de Clasificacion de Texto
 # 2. Definición del conjunto de datos etiquetados
-data = [
-    ("los Limones ", "amarillo"),
-    ("los Plátanos ", "amarillo"),
-    ("los Girasoles ", "amarillo"),
-    ("El sol ", "amarillo"),
-    ("El Taxi ", "amarillo"),
-    ("Lapiz ", "amarillo"),
-    ("Mostaza ", "amarillo"),
-    ("El cielo", "azul"),
-    ("El océano", "azul"),
-    ("Jeans", "azul"),
-    ("Zafiros", "azul"),
-    ("Turquesas", "azul"),
-    ("Aguamarinas", "azul"),
-    ("Pájaros azules", "azul"),
-    ("Las Manzanas", "rojo"),
-    ("las Rosas", "rojo"),
-    ("Fresas", "rojo"),
-    ("Cerezas", "rojo"),
-    ("Marte", "rojo"),
-    ("Bomberos", "rojo"),
-    ("Corazones", "rojo"),
-    ("Los Rubies", "rojo"),
-    ("Las Naranjas", "amarillo"),
-    ("Los Tomates", "rojo"),
-    ("El fuego", "rojo"),
-    ("Las Ballenas", "Azul"),
-    ("Las Luces", "Azul")
+data =  [
+    ("LOS LIMONES", "AMARILLO"),
+    ("LOS PLÁTANOS", "AMARILLO"),
+    ("LOS GIRASOLES", "AMARILLO"),
+    ("EL SOL", "AMARILLO"),
+    ("EL TAXI", "AMARILLO"),
+    ("LAPIZ", "AMARILLO"),
+    ("MOSTAZA", "AMARILLO"),
+    ("EL CIELO", "AZUL"),
+    ("EL OCÉANO", "AZUL"),
+    ("JEANS", "AZUL"),
+    ("ZAFIROS", "AZUL"),
+    ("TURQUESAS", "AZUL"),
+    ("AGUAMARINAS", "AZUL"),
+    ("PÁJAROS AZULES", "AZUL"),
+    ("LAS MANZANAS", "ROJO"),
+    ("LAS ROSAS", "ROJO"),
+    ("FRESAS", "ROJO"),
+    ("CEREZAS", "ROJO"),
+    ("MARTE", "ROJO"),
+    ("BOMBEROS", "ROJO"),
+    ("CORAZONES", "ROJO"),
+    ("LOS RUBIES", "ROJO"),
+    ("LAS NARANJAS", "AMARILLO"),
+    ("LOS TOMATES", "ROJO"),
+    ("EL FUEGO", "ROJO"),
+    ("LAS BALLENAS", "AZUL"),
+    ("LAS LUCES", "AZUL")
+]
 
-] 
 
 # 3. Preprocesamiento de datos:
 # Preprocesar los datos Tockenizar y extraer  caracteristicas
@@ -86,9 +86,10 @@ accuracy = nltk.classify.accuracy(classifier, test_set)
 
 while True:
     print("Introduzca un objeto o Cosa para que obtenga su color: ")
-    palabra = input()
+    palabra =input()
     print( palabra, "es: ")
-    print(classifier.classify(preprocesar(palabra)))
+    print(classifier.classify(preprocesar(palabra.upper())))
     print("Precisión del clasificador:", accuracy)
+    print("---------------------------------------")
     if palabra == "salir":
         break
