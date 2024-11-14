@@ -1,0 +1,24 @@
+# Ignorar archivos compilados
+*.class
+*.pyc
+*.o
+*.so
+
+# Ignorar directorios de entorno virtual
+venv/
+.env/
+__pycache__/
+
+# Ignorar configuraciones de IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos específicos
+config.yaml
+database.db
